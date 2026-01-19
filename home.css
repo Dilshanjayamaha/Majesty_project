@@ -139,7 +139,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('img/shop image.jpeg') no-repeat center center/cover;
+    background: url('img/shop_image.jpeg') no-repeat center center/cover;
     position: relative;
 }
 
