@@ -257,7 +257,6 @@ body {
 
 .card-h {
     flex: 0 0 auto;
-    /* Prevent cards from shrinking */
     width: 250px;
     background: #222;
     border-radius: 12px;
@@ -314,19 +313,6 @@ h2 {
     gap: 10px;
 }
 
-.sign-up-form input {
-    padding: 7px 10px;
-    font-size: 14px;
-    border: 1px solid #f0d800;
-    border-radius: 5px;
-    outline: none;
-    background: transparent;
-    backdrop-filter: blur(5px);
-}
-
-.sign-up-form input:focus:not(:placeholder-shown) {
-    color: #f0f0f0;
-}
 
 .sign-up-form button {
     padding: 7px 10px;
