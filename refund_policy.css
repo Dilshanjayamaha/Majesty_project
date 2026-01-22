@@ -1,0 +1,156 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    position: relative;
+    animation: fadeIn 1.2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    background-color: #121212;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/*nav links*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.cart {
+    height: 25px;
+    width: 80px;
+    transition: filter 0.3 ease;
+}
+
+.cart:hover {
+    content: url(img/add.png);
+}
+
+.nav-links li a:hover {
+    color: #e2b714;
+}
+/* refund policy text styles */
+.refund_policy_text pre{
+    color: aliceblue;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+.refund_policy_text h2{
+    text-align: center;
+    color: #e2b714;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.refund_policy_text{
+    background-color: #121212
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+.footer-column {
+    flex: 1 1 45%;
+    margin: 10px 0;
+}
+
+.footer-column img {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.footer-column p {
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex: 1 1 100%;
+    }
+}
