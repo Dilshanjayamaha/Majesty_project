@@ -64,22 +64,6 @@ body {
   box-shadow: 0 0 8px gold;
 }
 
-.login-form textarea{
-  padding: 12px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 10px;
-  background: transparent;
-  border: 1px solid rgb(165, 165, 162);
-  color: white;
-  font-size: 1rem;
-}
-
-.login-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 8px gold;
-}
-
 .login-form button {
   padding: 12px;
   background: gold;
