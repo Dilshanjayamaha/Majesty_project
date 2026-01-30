@@ -15,11 +15,19 @@ if(isset($_POST['submit']))
 
         if(!$result)
             {
-                echo "Error! : {$conn->error}";
+                echo    
+                    "<script>
+                        alert('Registeration Failed {$conn->error}');
+                        window.history.back();
+                    </script>";
             }
         else
             {
-                echo "Registed Successfully!" ; 
+                echo 
+                    "<script>
+                        alert('Registered Successfully');
+                        window.location.href='home.html';
+                    </script>" ; 
             }
 
 
