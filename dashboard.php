@@ -32,7 +32,7 @@ else
             {
                 position: fixed;
                 top: 0;
-                background-color: lightcyan;
+                background-color: gold;
                 width: 200px;
                 height: 100%;
             }
