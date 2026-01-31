@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
         $password = $_POST['password'];
         $role = "user";
 
-        //Checking whether email already created account 
+        //Checking whether email already have an account 
 
         $checkEmail = "SELECT id from users WHERE email = '$email'";
         $checkResult = mysqli_query($conn,$checkEmail);
@@ -18,7 +18,7 @@ if(isset($_POST['submit']))
             {
                 echo 
                     "<script>
-                        alert('This email is already registered ! \n\n You will be redirected to login page !');
+                        alert('This email is already registered ! \\n\\nYou will be redirected to login page !');
                         window.location.href='login.html';
                     </script>";
                 exit();
