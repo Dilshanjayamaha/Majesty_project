@@ -9,6 +9,21 @@ if(isset($_POST['submit']))
         $password = $_POST['password'];
         $role = "user";
 
+        //Checking whether email already created account 
+
+        $checkEmail = "SELECT id from users WHERE email = '$email'";
+        $checkResult = mysqli_query($conn,$checkEmail);
+
+        if(mysqli_num_rows($checkResult) >0 ) 
+            {
+                echo 
+                    "<script>
+                        alert('This email is already registered !');
+                        window.location.href='login.html';
+                    </script>";
+                exit();
+            }
+
         $sql = "insert into users(name,email,address,mobile,password,role) 
         values('$name','$email','$address','$mobile','$password','$role')";
         $result = mysqli_query($conn,$sql);
