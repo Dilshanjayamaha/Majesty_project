@@ -18,7 +18,7 @@ if(isset($_POST['submit']))
             {
                 echo 
                     "<script>
-                        alert('This email is already registered !');
+                        alert('This email is already registered ! \n\n You will be redirected to login page !');
                         window.location.href='login.html';
                     </script>";
                 exit();
