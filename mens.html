@@ -34,7 +34,7 @@
             <div class="item-card" data-title="Royal Velvet Dress" data-price="$149.00"
                 data-img="img/black t shirt boy.jpg" data-desc="Premium cotton fabric with a relaxed fit.">
                 <img src="img/White Hoodie on Earthy Surface.jpeg">
-                <h3>Royal Velvet Dress</h3>
+                <h3>Royal Velvet Dress (T)</h3>
                 <p>$149.00</p>
                 <button>View Details</button>
             </div>
@@ -140,7 +140,12 @@
             <h2 id="popupTitle"></h2>
             <p id="popupPrice"></p>
             <p id="popupDesc"></p>
-            <button class="popup-cart">Add to Cart</button>
+            <form action="add_to_cart.logic.php" method="POST">
+                <input type="hidden" name="product_id" id="cart_id">
+                <input type="hidden" name="product_name" id="cart_name">
+                <input type="hidden" name="price" id="cart_price">
+                <button type="submit" class="popup-cart">Add to Cart</button>
+            </form>
         </div>
     </div>
 
