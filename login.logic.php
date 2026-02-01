@@ -27,7 +27,7 @@
 
                         else 
                             {
-                                echo "dashboard for user";
+                                header("Location:checkout.php");
                             }
                     }
                 
