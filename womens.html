@@ -19,7 +19,7 @@
                 <li><a href="mens.html">MENS</a></li>
                 <li><a href="womens.html">WOMENS</a></li>
                 <li><a href="login.html">LOGIN</a></li>
-                <li><a href="cart.html"><img src="img/Addw.png" class="cart"></a></li>
+                <li><a href="cart.logic.php"><img src="img/Addw.png" class="cart"></a></li>
             </ul>
         </nav>
     </header>
@@ -31,13 +31,13 @@
         <div class="items-grid">
 
             <!--pop item 01-->
-            <div class="item-card" data-title="Hada Exclusive Ladies Party Kurta" data-price="Rs 5,590.00"
+            <div class="item-card" data-title="Hada Exclusive Ladies Party Kurta" data-price="9999.00"
                 data-img="img/Hada Exclusive Ladies Party Kurta.jpg"
                 data-desc="Crafted in a regular fit with a long length and long sleeves, this kurta features a refined printed design that adds a touch of 
                 sophistication.">
                 <img src="img/Hada Exclusive Ladies Party Kurta.jpg">
                 <h3>Hada Exclusive Ladies Party Kurta</h3>
-                <p>Rs 5,590.00</p>
+                <p>9999.00</p>
                 <button>View Details</button>
             </div>
 
@@ -142,7 +142,12 @@
             <h2 id="popupTitle"></h2>
             <p id="popupPrice"></p>
             <p id="popupDesc"></p>
-            <button class="popup-cart">Add to Cart</button>
+            <form action="add_to_cart.logic.php" method="POST">
+                <input type="hidden" name="product_id" id="cart_id">
+                <input type="hidden" name="product_name" id="cart_name">
+                <input type="hidden" name="price" id="cart_price">
+                <button type="submit" class="popup-cart">Add to Cart</button>
+            </form>
         </div>
     </div>
 
