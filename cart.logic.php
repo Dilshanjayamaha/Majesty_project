@@ -23,21 +23,24 @@ session_start();
      
     <div class="cart_sidebar">
         <ul>
-            <li><a href="home.html"> Add more items</a> </li>
+            <li><a href="home.html#shop_now"> Add more items</a> </li>
             <li><a href="logout.php">Logout </a> </li>
+            <li><a href="reset_cart.php">Reset Cart</a></li>
             <li><a href="reset_cart.php">Reset Cart</a></li>
         </ul>
     </div>
 
 <div class="cart_main">
 
-<h2>Your cart</h2>
 
 <?php
     if(empty($_SESSION['cart'])):
 ?>
-    <p>Cart is empty</p>
-
+    <center>
+    <h1>Cart is empty !!!</h1>
+    <br>
+    <a href="home.html#shop_now"><button class="shop-btn">Shop Now</button></a>
+    </center>
 <?php 
     else: 
 ?>
@@ -61,16 +64,16 @@ session_start();
 
     <tr>
         <td><?= $item['name'] ?></td>
-        <td>LKR <?= $item['price'] ?></td>
-        <td><?= $item['qty'] ?></td>
-        <td>LKR <?= $total ?></td>
+        <td align="right">LKR  <?= $item['price'] ?></td>
+        <td align="center"><?= $item['qty'] ?></td>
+        <td align="right">LKR  <?= $total ?></td>
     </tr>
 
     <?php endforeach; ?>
 
     <tr>
-        <td colspan="3"><b>Grand Total</b></td>
-        <td><b>LKR <?= $grand ?></b></td>
+        <td colspan="3" align="center"><b>Grand Total</b></td>
+        <td align="right"><b>LKR  <?= $grand ?></b></td>
     </tr>
 
 </table>
